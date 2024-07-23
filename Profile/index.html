@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Profile</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="profile-icon" onclick="toggleProfile()">
+        <img
+          src="ridho_merah_3×4.png"
+          alt="Profile Picture"
+          id="profile-picture"
+          onclick="openProfilePicture()"
+        />
+      </div>
+      <ul class="menu" id="slide-menu">
+        <li onclick="showContent('Home')">Home</li>
+        <li onclick="showContent('profile')">Profile</li>
+        <li onclick="showContent('Skills')">Skills</li>
+        <li onclick="showContent('Contact')">Contact</li>
+      </ul>
+    </div>
+
+    <div class="content" id="Home-content">
+      <h1>Welcome to Ridho's World</h1>
+      <p>
+        Hello there! I'm Ridho, the creative mind behind this corner of the
+        internet. This space is my canvas, where I express my passion for [your
+        main interests, hobbies, or expertise]. Whether you stumbled upon this
+        page intentionally or by happy accident, I'm thrilled to have you here.
+      </p>
+      <h1>Let's Connect</h1>
+      <p>
+        I believe in the power of community and the beauty of shared interests.
+        If you resonate with what you find here, I'd love to connect. Feel free
+        to reach out, share your thoughts, or just say hello. This space is as
+        much yours as it is mine.
+      </p>
+      <h1>Thank You for Being Here</h1>
+      <p>
+        Thank you for taking the time to explore my world. Whether you're a
+        frequent visitor or a first-time guest, your presence is genuinely
+        appreciated. Here's to a journey of discovery, inspiration, and
+        connection.
+      </p>
+      <p></p>
+      <p>Warm regards,</p>
+      <p>Ridho</p>
+    </div>
+
+    <div class="content" id="profile-content">
+      <h1>My Profile</h1>
+      <p>
+        My name is Muhammad Alfa Ridho and you can call me Ridho. I'm 17 years
+        old this years
+      </p>
+    </div>
+
+    <div class="content" id="Skills-content">
+      <h1>Skills</h1>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+    </div>
+
+    <div class="content" id="Contact-content">
+      <h1>My Contact</h1>
+      <p>
+        Email:
+        <a href="mailto:m.alfaridho1809@gmail.com">m.alfaridho1809@gmail.com</a>
+      </p>
+      <p>
+        GitHub:
+        <a href="https://github.com/vencyLab" target="_blank"
+          >github.com/vencyLab</a
+        >
+      </p>
+      <p>
+        Instagram:
+        <a href="https://www.instagram.com/malro__" target="_blank"
+          >instagram.com/malro__</a
+        >
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
