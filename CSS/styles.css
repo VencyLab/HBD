@@ -1,0 +1,176 @@
+/* General Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: #fcd7d7; /* Coquette color */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Header Style */
+header {
+  width: 100%;
+  background-color: #ff69b4; /* Coquette color */
+  color: white;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Navigation Style */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+nav ul li {
+  margin: 5px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Main Container Style */
+main {
+  width: 100%;
+  flex-grow: 1;
+  padding-top: 0px /* Adjust according to the height of the header */
+}
+
+/* Section Style */
+.section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px; /* Adjust padding for section */
+}
+
+/* Specific Style for About Us Section */
+#about {
+  padding-top: 0px; /* Adjust this value to lift the content higher */
+}
+
+/* Header and Navigation Text Style */
+h1, h2 {
+  font-size: 3em;
+  font-family: 'Brush Script MT', cursive; /* Beautiful script font */
+  color: #ff69b4; /* Coquette color */
+  text-shadow: 2px 2px #ffb6c1; /* Light shadow for a beautiful effect */
+  margin-bottom: 10px; /* Reduce bottom margin */
+}
+
+/* Paragraph Style */
+p {
+  font-size: 1.5em;
+  color: #ff1493; /* Darker coquette color */
+  margin-top: 10px; /* Reduce top margin */
+}
+
+/* Photo Container Style */
+.photo-container {
+  display: flex;
+  overflow-x: hidden; /* Hides horizontal scrollbar */
+  gap: 10px; /* Space between images */
+  padding: 10px;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+  width: 100%;
+  align-items: center;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  scroll-snap-type: x mandatory; /* Enable snapping */
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+.photo-container::-webkit-scrollbar {
+  display: none;
+}
+
+.photo-container img {
+  width: 250px; /* Adjust width as needed for mobile */
+  height: auto;
+  flex-shrink: 0; /* Prevents images from shrinking */
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, easez-index 0.3s ease;
+  scroll-snap-align: center; /* Align each image to the center */
+  z-index: 1;
+}
+
+.photo-container img.centered {
+  transform: scale(1.2); /* Larger scale for the centered photo */
+  z-index: 10; /* Higher z-index to bring it on top */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  header {
+      padding: 15px 0;
+  }
+
+  nav ul li {
+      margin: 5px 0;
+  }
+
+  nav ul li a {
+      font-size: 1em; /* Adjust font size for mobile */
+  }
+
+  p {
+    font-size: 0.79em;
+  }
+
+  .photo-container {
+      padding: 5px; /* Adjust padding for mobile */
+  }
+
+  .photo-container img {
+      width: 200px; /* Smaller image width for mobile */
+  }
+
+  main {
+      padding-top: 60px; /* Adjust padding to match header height */
+  }
+}
+
+/* Very Small Devices (e.g., small smartphones) */
+@media (max-width: 480px) {
+  header {
+      padding: 10px 0;
+  }
+
+  nav ul li {
+      margin: 2px;
+  }
+
+  nav ul li a {
+      font-size: 0.9em; /* Smaller font size for very small devices */
+  }
+
+  .photo-container {
+      padding: 2px; /* Adjust padding for very small devices */
+  }
+
+  .photo-container img {
+      width: 170px; /* Even smaller image width for very small devices */
+  }
+
+  main {
+      padding-top: 50px; /* Adjust padding to match header height */
+  }
+}
